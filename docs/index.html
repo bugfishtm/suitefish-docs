@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suitefish — Coming Soon</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #0c0d0f;
+    --surface: #131518;
+    --orange:  #e8652a;
+    --orange2: #f08c50;
+    --muted:   #4a4d55;
+    --text:    #d8d4cc;
+    --dim:     #6b6860;
+  }
+
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; overflow: hidden; }
+
+  /* Grain */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 100; opacity: 0.5;
+  }
+
+  /* Glow blob */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -20%; left: -10%;
+    width: 60vw; height: 60vw;
+    background: radial-gradient(ellipse, rgba(232,101,42,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    animation: blobDrift 12s ease-in-out infinite alternate;
+  }
+  @keyframes blobDrift {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(8vw, 6vh); }
+  }
+
+  /* Border lines */
+  .line-left, .line-right {
+    position: fixed; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--orange) 30%, var(--orange) 70%, transparent);
+    opacity: 0.12;
+  }
+  .line-left  { left:  clamp(20px, 5vw, 60px); }
+  .line-right { right: clamp(20px, 5vw, 60px); }
+  .line-top, .line-bottom {
+    position: fixed; left: 0; right: 0; height: 1px;
+    background: linear-gradient(to right, transparent, var(--orange) 30%, var(--orange) 70%, transparent);
+    opacity: 0.12;
+  }
+  .line-top    { top:    clamp(20px, 5vh, 50px); }
+  .line-bottom { bottom: clamp(20px, 5vh, 50px); }
+
+  /* Fish watermark */
+  .watermark {
+    position: fixed; bottom: -6%; right: -3%;
+    width: min(55vw, 480px);
+    opacity: 0.06; pointer-events: none;
+    animation: drift 9s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translateY(0) rotate(-2deg); }
+    to   { transform: translateY(-20px) rotate(1.5deg); }
+  }
+
+  /* Layout */
+  main {
+    height: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start;
+    padding: clamp(40px, 10vw, 120px);
+    position: relative;
+  }
+
+  .label {
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 1.8rem;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s;
+  }
+  .label span {
+    display: inline-block; width: 24px; height: 1px;
+    background: var(--orange); vertical-align: middle;
+    margin-right: 10px; margin-bottom: 2px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3.5rem, 10vw, 9rem);
+    font-weight: 700; line-height: 0.95; letter-spacing: -0.02em;
+    color: var(--text);
+    opacity: 0; animation: fadeUp 0.9s ease forwards 0.45s;
+  }
+  h1 em { font-style: italic; color: var(--orange); }
+
+  .tagline {
+    margin-top: 2.5rem;
+    font-size: clamp(0.72rem, 1.1vw, 0.85rem);
+    color: var(--dim); letter-spacing: 0.04em;
+    max-width: 340px; line-height: 1.9;
+    opacity: 0; animation: fadeUp 0.9s ease forwards 0.7s;
+  }
+
+  /* CTA link */
+  .cta {
+    margin-top: 2.8rem;
+    opacity: 0; animation: fadeUp 0.9s ease forwards 0.9s;
+  }
+  .cta a {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--bg); background: var(--orange);
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.2s;
+  }
+  .cta a:hover { background: var(--orange2); }
+  .cta a svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
+  .cta a:hover svg { transform: translateX(3px); }
+
+  .cta-sub {
+    margin-top: 0.9rem;
+    font-size: 0.58rem; color: var(--muted); letter-spacing: 0.1em;
+  }
+
+  /* Meta */
+  .meta {
+    position: fixed;
+    bottom: clamp(28px, 6vh, 60px);
+    left: clamp(40px, 10vw, 120px);
+    font-size: 0.58rem; letter-spacing: 0.15em; color: var(--muted);
+    opacity: 0; animation: fadeUp 0.9s ease forwards 1.1s;
+  }
+
+  /* Cursor blink */
+  .cursor {
+    display: inline-block; width: 6px; height: 6px;
+    background: var(--orange); border-radius: 50%;
+    margin-left: 6px; vertical-align: middle;
+    animation: blink 1.2s step-end infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="line-left"></div>
+<div class="line-right"></div>
+<div class="line-top"></div>
+<div class="line-bottom"></div>
+
+<svg class="watermark" viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M480 140 C400 60,280 20,140 60 C60 90,10 140,10 140 C10 140,60 190,140 220 C280 260,400 220,480 140Z" fill="var(--text)"/>
+  <path d="M480 140 L520 100 L530 140 L520 180 Z" fill="var(--text)"/>
+  <circle cx="160" cy="125" r="10" fill="var(--bg)"/>
+  <circle cx="163" cy="122" r="4" fill="var(--text)"/>
+  <path d="M250 100 Q270 90 290 100" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M230 115 Q250 105 270 115" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M270 115 Q290 105 310 115" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M220 132 Q240 122 260 132" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M260 132 Q280 122 300 132" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M300 132 Q320 122 340 132" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M230 150 Q250 140 270 150" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M270 150 Q290 140 310 150" stroke="var(--bg)" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M320 80 Q340 40 380 60 Q360 90 320 100Z" fill="var(--text)" opacity="0.7"/>
+</svg>
+
+<main>
+  <p class="label"><span></span>Something is swimming this way</p>
+  <h1>Suite<em>fish</em><span class="cursor"></span></h1>
+  <p class="tagline">A new kind of workspace is being built.<br>Elegant. Focused. Worth the wait.</p>
+
+  <div class="cta">
+    <a href="https://bugfishtm.github.io" target="_blank" rel="noopener">
+      Explore our other projects
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <p class="cta-sub">bugfishtm.github.io</p>
+  </div>
+</main>
+
+<p class="meta">© 2026 Suitefish &nbsp;·&nbsp; All rights reserved</p>
+
+</body>
+</html>
