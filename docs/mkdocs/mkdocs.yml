@@ -1,0 +1,62 @@
+site_name: Suitefish Documentation
+repo_url: https://github.com/bugfishtm/suitefish-cms
+repo_name: suitefish-cms
+nav:
+    - Home: index.md
+    - Download: download.md
+    - Installation:
+      - Installation: ./installation.md
+      - Install via Docker: ./installation_docker.md
+      - Install via Script: ./installation_script.md
+      - Manual (Website Mode): ./installation_manual.md   
+      - Manual (Server Mode): ./installation_manual_server.md   
+    - Contributing: contributing.md
+    - Warranty: warranty.md
+    - Support: support.md
+    - License: license.md
+    - Impressum: https://bugfishtm.github.io/impressum.html
+    - Privacy: https://bugfishtm.github.io/privacy.html
+theme:
+  name: material
+  logo: ./logo.png
+  favicon: ./favicon.ico
+  primary: deep orange
+  language: 'en'
+  accent: deep orange
+  font: false
+  features:
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+
+extra_css:
+  - extra.css
+  - neoteroi-mkdocs.css
+
+extra_javascript:
+  - extra.js
+
+plugins:
+    - mkdocstrings
+    - search
+    - mkdocs-video
+    - glightbox
+    
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  
+use_directory_urls: false
+
+extra:
+  meta:
+    author: "Jan-Maurice Dahlmanns"
