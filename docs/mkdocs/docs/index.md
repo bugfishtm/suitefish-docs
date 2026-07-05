@@ -3,6 +3,8 @@
 
 Suitefish-CMS: Powering Your Content, Your Way.
 
+!!! note "Developers can find full documented classes, functions and more in the running installation itself."
+
 -----------
 
 ## Introduction
