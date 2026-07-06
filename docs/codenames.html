@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="installation.html">
+        <link rel="prev" href="windows.html">
       
       
-        <link rel="next" href="installation_script.html">
+        <link rel="next" href="contributing.html">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Install via Docker - Suitefish Documentation</title>
+        <title>Codenames - Suitefish Documentation</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation-via-docker" class="md-skip">
+        <a href="#codenames" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install via Docker
+              Codenames
             
           </span>
         </div>
@@ -325,20 +325,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -359,7 +357,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -402,19 +400,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="installation_docker.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="installation_docker.html" class="md-nav__link">
         
   
   
@@ -430,7 +419,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -585,10 +573,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="codenames.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="codenames.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -604,6 +601,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -808,13 +806,39 @@
   
 
 
-<div><h1 id="installation-via-docker">Installation via Docker</h1>
-<div class="admonition info">
-<p class="admonition-title">Information</p>
-<p>Our docker instances will always run in website-mode. You can find information about the different modes in the manual installation and requirement section.</p>
-</div>
-<p>Here you can find the official Docker image related to this project. By clicking the link below, you'll be directed to the Docker Hub page where you can access and pull the image for use.</p>
-<p><a class="md-button" href="https://hub.docker.com/r/bugfishtm/suitefish">DockerHUB</a></p></div>
+<div><h1 id="codenames">Codenames</h1>
+<p>The software adopts various codenames to indicate the release type and its intended use. You can identify the codename corresponding to your installed version by checking the <code>_core/version.php</code> file in your source code. The following table details each codename and its specific purpose.  </p>
+<table>
+<thead>
+<tr>
+<th>Codename</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weasel</td>
+<td>&gt;7.10</td>
+<td>Alpha releases for early testing.</td>
+</tr>
+<tr>
+<td>Rat</td>
+<td>7.10/7.10.100</td>
+<td>Beta releases for feature preview.</td>
+</tr>
+<tr>
+<td>Onyx</td>
+<td>7.10/7.10.100</td>
+<td>Stable production releases.</td>
+</tr>
+<tr>
+<td>Raven</td>
+<td>8.10/8.10.100</td>
+<td>Initial public production releases.</td>
+</tr>
+</tbody>
+</table></div>
 
 
 

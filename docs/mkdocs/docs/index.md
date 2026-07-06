@@ -3,7 +3,7 @@
 
 Suitefish-CMS: Powering Your Content, Your Way.
 
-!!! note "Developers can find full documented classes, functions and more in the running installation itself."
+!!! note "Complete, up-to-date documentation for all classes, functions, and other components is available directly within the running installation, giving developers a reliable, always-in-sync reference as they build and extend the platform."
 
 -----------
 
@@ -54,17 +54,3 @@ Delivers the essential tools to effectively manage your site’s content, struct
 - **Integrated Updater** – GUI updater for core, modules, and database updates
 - **Windows Software** – desktop app for managing/deploying via Suitefish store
 - **Developer Friendly** – multi-site management, Bugfish Framework integration, debugging tools
-
------
-
-## Codenames
-
-The software adopts various codenames to indicate the release type and its intended use. You can identify the codename corresponding to your installed version by checking the `_core/version.php` file in your source code. The following table details each codename and its specific purpose.  
-  
-
-| Codename | Version        | Purpose                           |
-|----------|---------------|-----------------------------------|
-| Weasel   | >7.10         | Alpha releases for early testing.  |
-| Rat      | 7.10/7.10.100 | Beta releases for feature preview. |
-| Onyx     | 7.10/7.10.100 | Stable production releases.        |
-| Raven     | 8.10/8.10.100 | Initial public production releases.        |
