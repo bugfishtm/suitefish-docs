@@ -11,8 +11,9 @@ nav:
       - Install via Script: ./installation_script.md
       - Manual (Website Mode): ./installation_manual.md   
       - Manual (Server Mode): ./installation_manual_server.md   
-    - Android: android.md
-    - Windows: windows.md
+    - Integrations:
+      - Android: android.md
+      - Windows: windows.md
     - Codenames: codenames.md
     - Contributing: contributing.md
     - Warranty: warranty.md
