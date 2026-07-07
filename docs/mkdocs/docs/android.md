@@ -6,3 +6,5 @@ Suitefishfor Android is a lightweight, free and open-source app store client. It
 
 [GitHub](https://github.com/bugfishtm/suitefish-android){.md-button}
 
+
+<img src="./android.png" style="max-width: 100%;">

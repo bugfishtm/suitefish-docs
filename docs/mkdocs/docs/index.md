@@ -27,15 +27,38 @@ Suitefish offers two installation modes: as a default website for easy deploymen
     </div>
   </div>
   
+  <div class="product-card" onclick="window.location.href='https://bugfishtm.github.io/suitefish-website';">
+    <div class="product-card-content">
+      <h3>Website</h3>
+      <p style="font-size: 16px;">Visit the suitefish website!</p>
+    </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://github.com/bugfishtm/suitefish-cms';">
+    <div class="product-card-content">
+      <h3>GitHub</h3>
+      <p style="font-size: 16px;">Visit the suitefish github repository.</p>
+    </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://hub.docker.com/r/bugfishtm/suitefish';">
+    <div class="product-card-content">
+      <h3>Docker</h3>
+      <p style="font-size: 16px;">Visit the suitefish docker repository.</p>
+    </div>
+  </div>
+
   <div class="product-card" onclick="window.location.href='https://github.com/bugfishtm/suitefish-cms/issues';">
     <div class="product-card-content">
-      <h3>Trouble?</h3>
+      <h3>Issues</h3>
       <p style="font-size: 16px;">Write a ticket, I will try to help you.</p>
     </div>
   </div>
+
 </div>
 
 </div>
+<img src="./suitefish_7.png" style="max-width: 100%;">
 
 ---
 

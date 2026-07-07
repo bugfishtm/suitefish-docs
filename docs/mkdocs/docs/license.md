@@ -1,7 +1,7 @@
 GNU General Public License
 ==========================
 
-!!! note "Full list of included libraries and licenses in the suitefish installation itself."
+!!! note "Full list of included libraries and licenses in the suitefish installation itself and the repositories '_licenses' folder."
 
 _Version 3, 29 June 2007_  
 _Copyright © 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_

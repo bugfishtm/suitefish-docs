@@ -6,3 +6,4 @@ Suitefish for Windows is a lightweight, free and open-source software store clie
 
 [GitHub](https://github.com/bugfishtm/suitefish-windows){.md-button}
 
+<img src="./windows.png" style="max-width: 100%;">

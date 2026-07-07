@@ -3,6 +3,7 @@ repo_url: https://github.com/bugfishtm/suitefish-cms
 repo_name: suitefish-cms
 nav:
     - Home: index.md
+    - Store: store.md
     - Videos: videos.md
     - Download: download.md
     - Installation:
@@ -15,6 +16,7 @@ nav:
       - Android: android.md
       - Windows: windows.md
     - Codenames: codenames.md
+    - Resources: resources.md
     - Contributing: contributing.md
     - Warranty: warranty.md
     - Support: support.md
