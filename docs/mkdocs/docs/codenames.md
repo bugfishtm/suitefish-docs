@@ -8,4 +8,4 @@ The software adopts various codenames to indicate the release type and its inten
 | Weasel   | >7.10         | Alpha releases for early testing.  |
 | Rat      | 7.10/7.10.100 | Beta releases for feature preview. |
 | Onyx     | 7.10/7.10.100 | Stable production releases.        |
-| Raven     | 8.10/8.10.100 | Initial public production releases.        |
+| Piranha     | 8.10/8.10.100 | Initial public production releases.        |
