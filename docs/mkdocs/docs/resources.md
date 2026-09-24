@@ -19,11 +19,9 @@ The Suitefish ecosystem brings together a comprehensive set of repositories, too
 
 | Name | Description | Link |
 |--------|--------------------|-------|
-| Redirector | Public Redirector | [Redirector](https://bugfishtm.github.io/suitefish-cms) |
 | Website | Public Website | [Website](https://bugfishtm.github.io/suitefish-website) |
 | Store | Public Store | [Store](https://store.suitefish.com) |
 | Documentation | Public Documentation | [Documentation](https://bugfishtm.github.io/suitefish-docs) |
-| Videos | Public Videos | [Youtube Videos](https://www.youtube.com/playlist?list=PL6npOHuBGrpAfrpUzQPTOWdqoCnhq1oP0) |
 | Creator | Information about the creator. | [Bugfish](https://bugfish.eu) |
 
 ## Developers Modules
