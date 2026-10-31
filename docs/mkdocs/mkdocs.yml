@@ -1,6 +1,7 @@
 site_name: Suitefish Documentation
 repo_url: https://github.com/bugfishtm/suitefish-cms
 repo_name: suitefish-cms
+copyright: © Bugfish · Suitefish CMS
 nav:
     - Home: index.md
     - Store: store.md
@@ -26,18 +27,18 @@ nav:
     - Privacy: https://bugfishtm.github.io/privacy.html
 theme:
   name: material
+  custom_dir: overrides
   logo: ./logo.png
   favicon: ./favicon.ico
-  primary: deep orange
   language: 'en'
-  accent: deep orange
   font: false
   features:
     - content.code.copy
+  # Dark-only, like the Suitefish website. Colors are set in extra.css.
   palette:
-    - scheme: default
-      primary: blue
-      accent: blue
+    scheme: slate
+    primary: custom
+    accent: custom
 
 extra_css:
   - extra.css
@@ -68,3 +69,14 @@ use_directory_urls: false
 extra:
   meta:
     author: "Jan-Maurice Dahlmanns"
+  # Footer links (rendered as text links by overrides/partials/social.html)
+  social:
+    - name: Website
+      icon: material/web
+      link: https://bugfishtm.github.io/suitefish-website
+    - name: Store
+      icon: material/store
+      link: https://store.suitefish.com
+    - name: GitHub
+      icon: fontawesome/brands/github
+      link: https://github.com/bugfishtm/suitefish-cms

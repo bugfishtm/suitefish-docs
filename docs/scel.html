@@ -52,6 +52,8 @@
 
     
     
+  <meta name="theme-color" content="#121317">
+
   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -67,12 +69,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -103,10 +103,9 @@
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Suitefish Documentation
-          </span>
+        <div class="md-header__topic sf-brand">
+          <span class="sf-brand__name">Suite<span>fish</span></span>
+          <span class="sf-brand__tagline">Documentation</span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -119,19 +118,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -970,6 +957,13 @@ Public-Key: lsLYH0kQMFvYAOKG1c/AUE72QnvHMgfNam3DGcjSm2c=  </p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight sf-footer-brand">
+      
+        <img src="logo.png" alt="" width="24" height="24">
+      
+      <span>© Bugfish · Suitefish CMS</span>
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -977,6 +971,16 @@ Public-Key: lsLYH0kQMFvYAOKG1c/AUE72QnvHMgfNam3DGcjSm2c=  </p>
     </a>
   
 </div>
+      
+        <nav class="sf-footer-links" aria-label="Footer links">
+  
+    <a href="https://bugfishtm.github.io/suitefish-website" target="_blank" rel="noopener">Website</a>
+  
+    <a href="https://store.suitefish.com" target="_blank" rel="noopener">Store</a>
+  
+    <a href="https://github.com/bugfishtm/suitefish-cms" target="_blank" rel="noopener">GitHub</a>
+  
+</nav>
       
     </div>
   </div>

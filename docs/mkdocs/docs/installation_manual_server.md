@@ -239,7 +239,11 @@ stopasgroup=true
 killasgroup=true
 stopwaitsecs=30
 stderr_logfile=/var/log/suitefish_error.log
+stderr_logfile_maxbytes=50MB
+stderr_logfile_backups=10
 stdout_logfile=/var/log/suitefish_info.log
+stdout_logfile_maxbytes=50MB
+stdout_logfile_backups=10
 environment=SUITEFISH_SUPERVISOR_LOG_FILE="/var/log/suitefish_info.log",SUITEFISH_SUPERVISOR_ERROR_FILE="/var/log/suitefish_error.log",SUITEFISH_WEBSERVER_USER="www-data",SUITEFISH_WEBROOT="/var/www/html"
 ```
 

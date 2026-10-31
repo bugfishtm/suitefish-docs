@@ -1,0 +1,20 @@
+{#-
+  Based on Material for MkDocs 9.7.0 partials/copyright.html.
+  Adds the small logo in front of the copyright, like the website footer.
+-#}
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight sf-footer-brand">
+      {% if config.theme.logo %}
+        <img src="{{ config.theme.logo | url }}" alt="" width="24" height="24">
+      {% endif %}
+      <span>{{ config.copyright }}</span>
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

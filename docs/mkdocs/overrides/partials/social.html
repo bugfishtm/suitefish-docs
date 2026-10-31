@@ -1,0 +1,9 @@
+{#-
+  Replaces Material's icon-only social links with the plain text links
+  used in the website footer. Entries come from extra.social (name + link).
+-#}
+<nav class="sf-footer-links" aria-label="Footer links">
+  {% for social in config.extra.social %}
+    <a href="{{ social.link }}" target="_blank" rel="noopener">{{ social.name }}</a>
+  {% endfor %}
+</nav>
